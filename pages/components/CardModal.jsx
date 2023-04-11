@@ -44,7 +44,7 @@ const CardModal = (props) => {
                 <Box className={styles.headRoot}>
                     <Box className={styles.imageCard}>
                         <img
-                            src={data.pokemon.image}
+                            src={data?.pokemon?.image}
                             alt=""
                             className={styles.imageCard}
                         />
