@@ -51,7 +51,11 @@ export default function Home() {
   if (loading) return <p>Loading...</p>;
   return (
     <div>
-      <h1>Pokemon List</h1>
+      <Box>
+        <Typography variant="h1" sx={{ textAlign: "center" }}>
+          Pokemon
+        </Typography>
+      </Box>
       <ul>
         <Box>
           <Container maxWidth="xl">
