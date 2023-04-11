@@ -59,7 +59,7 @@ export default function Home() {
               <Box SX={{ paddingTop: "30px" }}>
                 <Grid container spacing={3}>
                   {data &&
-                    data.pokemons.map((pokemon) => {
+                    data?.pokemons?.map((pokemon) => {
                       return (
                         <Grid
                           item
@@ -67,7 +67,7 @@ export default function Home() {
                           md={3}
                           sm={6}
                           xs={12}
-                          key={pokemon.id}
+                          key={pokemon?.id}
                         >
                           <Box
                             sx={{
@@ -81,7 +81,7 @@ export default function Home() {
                                 paddingTop: "7px",
                               },
                             }}
-                            onClick={() => handleOpen(pokemon.id)}
+                            onClick={() => handleOpen(pokemon?.id)}
                           >
                             <Box
                               sx={{
@@ -96,21 +96,21 @@ export default function Home() {
                               }}
                             >
                               <img
-                                src={pokemon.image}
+                                src={pokemon?.image}
                                 alt=""
                                 className={styles.imageCard}
                               />
                             </Box>
                             <Box>
                               <Typography variant="h6">
-                                Name : {pokemon.name}
+                                Name : {pokemon?.name}
                               </Typography>
                               <Typography
                                 variant="h6"
                               >
-                                Number : {pokemon.id}
+                                Number : {pokemon?.id}
                               </Typography>
-                              <p>Types: {pokemon.types.join(", ")}</p>
+                              <p>Types: {pokemon?.types.join(", ")}</p>
                             </Box>
                           </Box>
                         </Grid>
