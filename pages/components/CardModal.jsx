@@ -29,10 +29,8 @@ query pokemon($id: String){
 `;
 const CardModal = (props) => {
     const { open, handleClose, id } = props
-    console.log(id);
     const { loading, data } = useQuery(GET_POKEMON_DETAIL, {
         variables: { id: id },
-        // Disable server-side caching since we only need to fetch the data once
         ssr: false,
     });
     if (loading) return <p>Loading...</p>;
