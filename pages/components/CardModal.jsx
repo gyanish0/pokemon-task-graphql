@@ -34,7 +34,7 @@ const CardModal = (props) => {
         variables: { id: id },
         ssr: false,
     });
-    
+
     if (loading) return <p>Loading...</p>;
     return (
         <div>
@@ -95,6 +95,7 @@ const CardModal = (props) => {
                         <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: 400 }}>Classification:</Typography>
                         <Typography variant="h6" sx={{ fontSize: "20px", fontWeight: 400 }}>{data.pokemon?.classification}</Typography>
                     </Box>
+                    <hr />
                     <Box className={styles.cardData}>
                         <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: 400 }}>fleeRate:</Typography>
                         <Typography variant="h6" sx={{ fontSize: "20px", fontWeight: 400 }}>{data.pokemon?.fleeRate}</Typography>
