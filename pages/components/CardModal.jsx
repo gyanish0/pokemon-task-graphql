@@ -29,10 +29,12 @@ query pokemon($id: String){
 `;
 const CardModal = (props) => {
     const { open, handleClose, id } = props
+
     const { loading, data } = useQuery(GET_POKEMON_DETAIL, {
         variables: { id: id },
         ssr: false,
     });
+    
     if (loading) return <p>Loading...</p>;
     return (
         <div>
@@ -51,7 +53,7 @@ const CardModal = (props) => {
                     <hr />
                     <Box className={styles.cardData}>
                         <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: 400 }}>Name:</Typography>
-                        <Typography variant="h6" sx={{ fontSize: "20px", fontWeight: 400 }}>{data.pokemon?.name}</Typography>
+                        <Typography variant="h6" sx={{ fontSize: "20px", fontWeight: 400 }}>{data?.pokemon?.name}</Typography>
                     </Box>
                     <hr />
                     <Box className={styles.cardData}>

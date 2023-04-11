@@ -120,12 +120,15 @@ export default function Home() {
               </Box>
             </Box>
             <Box>
-              <CardModal
-                count={count} setCount={setCount} open={open} setOpen={setOpen}
-                handleClose={handleClose}
-                handleOpen={handleOpen}
-                id={id}
-              />
+              {
+                id &&
+                <CardModal
+                  count={count} setCount={setCount} open={open} setOpen={setOpen}
+                  handleClose={handleClose}
+                  handleOpen={handleOpen}
+                  id={id}
+                />
+              }
             </Box>
           </Container>
         </Box>
