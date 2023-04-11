@@ -1,4 +1,3 @@
-"client side";
 import { useQuery, gql } from "@apollo/client";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { useState } from "react";
